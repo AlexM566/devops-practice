@@ -22,34 +22,34 @@ docker network ls
 2. Inspect the playground's networks:
 ```bash
 # Inspect the frontend network
-docker network inspect devops-playground_frontend
+docker network inspect devops-practice_frontend
 
 # Inspect the backend network
-docker network inspect devops-playground_backend
+docker network inspect devops-practice_backend
 
 # Inspect the monitoring network
-docker network inspect devops-playground_monitoring
+docker network inspect devops-practice_monitoring
 ```
 
 3. See which containers are on each network:
 ```bash
 # Frontend network containers
-docker network inspect devops-playground_frontend -f '{{range .Containers}}{{.Name}} {{end}}'
+docker network inspect devops-practice_frontend -f '{{range .Containers}}{{.Name}} {{end}}'
 
 # Backend network containers
-docker network inspect devops-playground_backend -f '{{range .Containers}}{{.Name}} {{end}}'
+docker network inspect devops-practice_backend -f '{{range .Containers}}{{.Name}} {{end}}'
 ```
 
 4. Check a container's network configuration:
 ```bash
-docker inspect devops-playground-nginx-web-1 | grep -A 20 Networks
+docker inspect devops-nginx | grep -A 20 Networks
 ```
 
 ### Part 2: Test Network Isolation
 
 1. Access the Ubuntu practice container:
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 ```
 
 2. Check which networks this container is connected to:
@@ -254,7 +254,7 @@ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' CON
 
 2. Test DNS resolution in containers:
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 
 # Check DNS configuration
 cat /etc/resolv.conf
@@ -270,14 +270,14 @@ exit
 3. Monitor network traffic:
 ```bash
 # Install tcpdump in a container
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 apt-get update && apt-get install -y tcpdump
 
 # Capture traffic
 tcpdump -i any -n host postgres
 
 # In another terminal, generate traffic
-docker exec devops-playground-ubuntu-practice-1 ping -c 3 postgres
+docker exec devops-ubuntu ping -c 3 postgres
 ```
 
 ### Part 7: Understand the Playground Network Architecture
@@ -291,7 +291,7 @@ cat > show-networks.sh << 'EOF'
 echo "=== Docker Networks in Playground ==="
 echo ""
 
-for network in $(docker network ls --filter name=devops-playground --format '{{.Name}}'); do
+for network in $(docker network ls --filter name=devops-practice --format '{{.Name}}'); do
   echo "Network: $network"
   echo "Containers:"
   docker network inspect $network -f '{{range .Containers}}  - {{.Name}}{{println}}{{end}}'
@@ -325,10 +325,10 @@ chmod +x show-networks.sh
 3. Test cross-network communication:
 ```bash
 # Check if nodejs-api can reach postgres
-docker exec devops-playground-nodejs-api-1 sh -c "nc -zv postgres 5432" 2>&1
+docker exec devops-nodejs-api sh -c "nc -zv postgres 5432" 2>&1
 
 # Check if prometheus can reach nodejs-api
-docker exec devops-playground-prometheus-1 sh -c "wget -q -O- http://nodejs-api:3000/metrics" | head -5
+docker exec devops-prometheus sh -c "wget -q -O- http://nodejs-api:3000/metrics" | head -5
 ```
 
 ## Expected Output
@@ -337,19 +337,19 @@ docker exec devops-playground-prometheus-1 sh -c "wget -q -O- http://nodejs-api:
 ```
 NETWORK ID     NAME                              DRIVER    SCOPE
 abc123def456   bridge                            bridge    local
-def456ghi789   devops-playground_frontend        bridge    local
-ghi789jkl012   devops-playground_backend         bridge    local
-jkl012mno345   devops-playground_monitoring      bridge    local
+def456ghi789   devops-practice_frontend        bridge    local
+ghi789jkl012   devops-practice_backend         bridge    local
+jkl012mno345   devops-practice_monitoring      bridge    local
 ```
 
 **docker network inspect (excerpt):**
 ```json
 {
-    "Name": "devops-playground_frontend",
+    "Name": "devops-practice_frontend",
     "Driver": "bridge",
     "Containers": {
         "abc123": {
-            "Name": "devops-playground-nginx-web-1",
+            "Name": "devops-nginx",
             "IPv4Address": "172.20.0.2/16"
         }
     }
@@ -447,19 +447,19 @@ The playground uses both!
 ```bash
 # List all networks
 docker network ls
-# Shows: bridge, devops-playground_frontend, backend, monitoring
+# Shows: bridge, devops-practice_frontend, backend, monitoring
 
 # Inspect a network
-docker network inspect devops-playground_frontend
+docker network inspect devops-practice_frontend
 # Shows: containers, subnet, gateway
 
 # See containers on network
-docker network inspect devops-playground_frontend -f '{{range .Containers}}{{.Name}} {{end}}'
+docker network inspect devops-practice_frontend -f '{{range .Containers}}{{.Name}} {{end}}'
 ```
 
 **Step 2: Test network isolation**
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 
 # Check interfaces
 ip addr show
@@ -538,13 +538,13 @@ docker rm host-test none-test
 **Step 6: Understand playground architecture**
 ```bash
 # Show network topology
-for network in $(docker network ls --filter name=devops-playground --format '{{.Name}}'); do
+for network in $(docker network ls --filter name=devops-practice --format '{{.Name}}'); do
   echo "=== $network ==="
   docker network inspect $network -f '{{range .Containers}}{{.Name}}{{println}}{{end}}'
 done
 
 # Test cross-network communication
-docker exec devops-playground-nodejs-api-1 sh -c "nc -zv postgres 5432"
+docker exec devops-nodejs-api sh -c "nc -zv postgres 5432"
 # Works if nodejs-api is on backend network
 ```
 

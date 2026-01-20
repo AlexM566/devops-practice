@@ -16,7 +16,7 @@ Learn how to identify listening ports, check port connectivity, and understand w
 
 1. Access the Ubuntu practice container:
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 ```
 
 2. Install network utilities:
@@ -51,7 +51,7 @@ netstat -tuln | grep :5432
 exit
 
 # Access the postgres container
-docker exec -it devops-playground-postgres-1 sh
+docker exec -it devops-postgres sh
 
 # Install net-tools if needed
 apt-get update && apt-get install -y net-tools procps
@@ -67,7 +67,7 @@ exit
 
 1. Return to the Ubuntu practice container:
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 ```
 
 2. Test if a port is open using netcat (nc):
@@ -135,7 +135,7 @@ curl -v http://localhost:9090/-/healthy
 
 1. Back in the Ubuntu container, scan a service for open ports:
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 ```
 
 2. Scan common ports on postgres:
@@ -273,7 +273,7 @@ This helps diagnose network issues!
 
 **Step 1: Install tools and check listening ports**
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 apt-get update && apt-get install -y net-tools netcat-openbsd telnet
 
 # View all listening ports
@@ -356,7 +356,7 @@ nc -zv localhost 5432
 **Step 5: Check which process uses a port**
 ```bash
 # Access a service container
-docker exec -it devops-playground-postgres-1 sh
+docker exec -it devops-postgres sh
 
 # Install tools
 apt-get update && apt-get install -y net-tools procps

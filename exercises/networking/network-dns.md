@@ -16,7 +16,7 @@ Learn how to use DNS tools to resolve hostnames, query DNS records, and understa
 
 1. Access the Ubuntu practice container:
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 ```
 
 2. Install DNS utilities (dig and nslookup):
@@ -209,7 +209,7 @@ Common DNS record types:
 
 **Step 1: Access container and install tools**
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 apt-get update && apt-get install -y dnsutils
 ```
 

@@ -162,7 +162,7 @@ docker inspect CONTAINER_NAME | grep -A 10 Networks
 
 **Step 1: Access the Ubuntu container**
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 ```
 
 **Step 2: Test inter-container connectivity**

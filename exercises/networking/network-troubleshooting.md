@@ -16,7 +16,7 @@ Learn systematic approaches to diagnosing and resolving network connectivity iss
 
 1. Access the Ubuntu practice container:
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 ```
 
 2. Install network troubleshooting tools:
@@ -70,7 +70,7 @@ tcpdump -i any host postgres
 2. In another terminal, generate some traffic:
 ```bash
 # Open another terminal
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 curl http://nodejs-api:3000/health
 ping -c 3 postgres
 ```
@@ -117,7 +117,7 @@ docker-compose stop redis
 
 2. Try to connect and diagnose:
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 
 # Try to connect
 nc -zv redis 6379
@@ -140,7 +140,7 @@ exit
 docker-compose start redis
 
 # Verify fix
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 nc -zv redis 6379
 # Should succeed now
 ```
@@ -405,7 +405,7 @@ Each error points to a different layer of the problem!
 
 **Step 1: Install and use traceroute**
 ```bash
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 apt-get update && apt-get install -y traceroute mtr tcpdump dnsutils net-tools
 
 # Trace to external host
@@ -449,7 +449,7 @@ exit
 docker-compose stop redis
 
 # Try to connect
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 nc -zv redis 6379
 # Output: Connection refused or timeout
 
@@ -466,7 +466,7 @@ nc -zv redis 6379  # Will fail
 # Fix and verify
 exit
 docker-compose start redis
-docker exec -it devops-playground-ubuntu-practice-1 bash
+docker exec -it devops-ubuntu bash
 nc -zv redis 6379  # Should work now
 ```
 
