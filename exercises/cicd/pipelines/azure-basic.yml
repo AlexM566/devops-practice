@@ -1,0 +1,28 @@
+name: Azure Build Pipeline
+
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: Build
+    jobs:
+      - job: BuildJob
+        steps:
+          - script: echo "Building the application..."
+            displayName: Build Step
+
+          - script: |
+              echo "Running unit tests..."
+              echo "Tests completed!"
+            displayName: Test Step
+
+  - stage: Deploy
+    condition: succeeded()
+    jobs:
+      - job: DeployJob
+        steps:
+          - script: echo "Deploying to staging..."
+            displayName: Deploy Step
