@@ -26,7 +26,10 @@ docker-compose up -d
 # 3. Verify services are running
 docker-compose ps
 
-# 4. Start learning!
+# 4. (Optional) Set up Kubernetes cluster for k8s exercises
+cd kubernetes && ./setup-k8s.sh && cd ..
+
+# 5. Start learning!
 # Browse exercises in the exercises/ directory
 ```
 

@@ -35,6 +35,16 @@ This document provides a complete index of all available exercises in the DevOps
 
 ## Kubernetes Exercises
 
+> **⚠️ IMPORTANT: Kubernetes Cluster Setup Required**
+> 
+> Before starting any Kubernetes exercises, you must create a local kind cluster:
+> ```bash
+> cd kubernetes
+> ./setup-k8s.sh
+> ```
+> This creates a multi-node cluster (1 control plane + 2 workers) and takes a few minutes.
+> You only need to do this once - the cluster persists until you delete it.
+
 ### Beginner Level
 
 | Exercise | Difficulty | Time | Description |
