@@ -1,0 +1,19 @@
+# Example Service - LoadBalancer
+# Exposes service externally using a cloud provider's load balancer
+# Note: In kind, this will remain in "Pending" state without MetalLB
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-loadbalancer
+  labels:
+    app: nginx
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http

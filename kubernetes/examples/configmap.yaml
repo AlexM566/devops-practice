@@ -1,0 +1,30 @@
+# Example ConfigMap
+# Stores non-confidential configuration data as key-value pairs
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  # Simple key-value pairs
+  app.name: "DevOps Playground"
+  app.environment: "development"
+  app.debug: "true"
+  
+  # Multi-line configuration file
+  nginx.conf: |
+    server {
+      listen 80;
+      server_name localhost;
+      
+      location / {
+        root /usr/share/nginx/html;
+        index index.html;
+      }
+      
+      location /health {
+        access_log off;
+        return 200 "healthy\n";
+        add_header Content-Type text/plain;
+      }
+    }

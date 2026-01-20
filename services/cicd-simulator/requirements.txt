@@ -1,0 +1,6 @@
+pyyaml>=6.0.1
+yamllint>=1.33.0
+click>=8.1.7
+rich>=13.7.0
+pytest>=8.0.0
+hypothesis>=6.100.0

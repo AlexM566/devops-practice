@@ -1,0 +1,67 @@
+# Example Ingress
+# Manages external access to services via HTTP/HTTPS routes
+# Requires an Ingress Controller (e.g., nginx-ingress) to be installed
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  # Route traffic based on hostname
+  - host: app.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-clusterip
+            port:
+              number: 80
+  
+  # Route traffic based on path
+  - host: api.local
+    http:
+      paths:
+      - path: /v1
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-clusterip
+            port:
+              number: 80
+      - path: /v2
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-clusterip
+            port:
+              number: 80
+
+---
+# Example Ingress with TLS
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress-tls
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - secure.local
+    secretName: tls-secret
+  rules:
+  - host: secure.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-clusterip
+            port:
+              number: 80

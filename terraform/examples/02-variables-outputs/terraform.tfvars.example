@@ -1,0 +1,19 @@
+# Example variable values
+# Copy this file to terraform.tfvars and customize
+
+name             = "John Doe"
+greeting_message = "Welcome"
+filename         = "custom-greeting.txt"
+secret_value     = "super-secret-value"
+
+tags = {
+  Environment = "production"
+  Project     = "my-project"
+  Owner       = "devops-team"
+}
+
+enabled_features = [
+  "feature-a",
+  "feature-b",
+  "feature-c"
+]
