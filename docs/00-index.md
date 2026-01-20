@@ -126,7 +126,7 @@ All documentation is for version **1.0.0** (2026-01-19)
 - **Setup Issues**: See [Troubleshooting](01-readme.md#troubleshooting)
 - **Exercise Help**: Check hints and solutions in exercise files
 - **Contributing**: See [Contributing Guide](03-contributing.md)
-- **Bug Reports**: Check [Changelog](05-changelog.md) for known issues
+- **Bug Reports**: Check [Changelog](changelog/changelog.md) for known issues
 
 ---
 
