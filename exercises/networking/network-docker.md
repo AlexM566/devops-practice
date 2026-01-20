@@ -203,11 +203,10 @@ docker run -d --name host-test --network host nginx:alpine
 docker inspect host-test | grep -A 10 Networks
 ```
 
-3. Test access (nginx will be on host's port 80):
+3. Test access (nginx will be on host's port 8080):
 ```bash
-# This might conflict with the playground's nginx
-# Check if it's running
-curl http://localhost:80
+# This should work without conflicts now
+curl http://localhost:8080
 ```
 
 4. Clean up:

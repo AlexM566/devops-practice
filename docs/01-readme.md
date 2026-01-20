@@ -95,7 +95,7 @@ Browse the exercises in the `exercises/` directory or check out [Exercise Index]
 
 | Service | URL | Description | Credentials |
 |---------|-----|-------------|-------------|
-| Nginx Web Server | http://localhost:80 | Static web server and reverse proxy | N/A |
+| Nginx Web Server | http://localhost:8080 | Static web server and reverse proxy | N/A |
 | Node.js API | http://localhost:3000 | Sample REST API with health endpoint | N/A |
 
 ### Databases

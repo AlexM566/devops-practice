@@ -38,7 +38,10 @@ ss -tuln
 
 3. Filter for specific ports:
 ```bash
-# Check if port 80 is listening
+# Check if port 8080 is listening (docker-compose nginx)
+netstat -tuln | grep :8080
+
+# Check if port 80 is listening (kubernetes ingress)
 netstat -tuln | grep :80
 
 # Check if port 5432 is listening
@@ -126,7 +129,7 @@ telnet localhost 9090
 
 4. Use curl to test HTTP ports:
 ```bash
-curl -v http://localhost:80
+curl -v http://localhost:8080
 curl -v http://localhost:3000/health
 curl -v http://localhost:9090/-/healthy
 ```
@@ -175,7 +178,7 @@ chmod +x portscan.sh
 ```
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State
-tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN
 tcp        0      0 0.0.0.0:3000            0.0.0.0:*               LISTEN
 tcp        0      0 0.0.0.0:5432            0.0.0.0:*               LISTEN
 ```
@@ -192,7 +195,7 @@ nc: connect to postgres port 8080 (tcp) failed: Connection refused
 
 **docker-compose ps (ports column):**
 ```
-0.0.0.0:80->80/tcp
+0.0.0.0:8080->80/tcp
 0.0.0.0:3000->3000/tcp
 0.0.0.0:5432->5432/tcp
 0.0.0.0:6379->6379/tcp
@@ -344,7 +347,7 @@ docker-compose ps
 # Shows port mappings like 0.0.0.0:5432->5432/tcp
 
 # Test with curl
-curl -v http://localhost:80
+curl -v http://localhost:8080
 curl -v http://localhost:3000/health
 curl -v http://localhost:9090/-/healthy
 

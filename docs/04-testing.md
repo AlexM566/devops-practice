@@ -73,9 +73,9 @@ All services should show "Up" status with "(healthy)" indicator where health che
 Test each service is accessible from the host machine:
 
 #### Web Services
-- [ ] **Nginx Web** - http://localhost:80
+- [ ] **Nginx Web** - http://localhost:8080
   - Expected: HTML page loads
-  - Test: `curl -I http://localhost:80`
+  - Test: `curl -I http://localhost:8080`
   
 - [ ] **Node.js API** - http://localhost:3000
   - Expected: API responds

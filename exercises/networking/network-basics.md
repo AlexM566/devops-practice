@@ -67,7 +67,7 @@ curl -I https://www.google.com
 
 2. From your host machine, test the web server:
 ```bash
-curl http://localhost:80
+curl http://localhost:8080
 ```
 
 3. Test the API health endpoint:
@@ -204,7 +204,7 @@ exit
 **Step 5: Test from host machine**
 ```bash
 # Test web server
-curl http://localhost:80
+curl http://localhost:8080
 
 # Test API
 curl http://localhost:3000/health
@@ -221,7 +221,7 @@ curl http://localhost:9090/-/healthy
 
 2. **Docker Networks**: Containers on the same network can communicate directly. The docker-compose.yml defines networks (frontend, backend, monitoring) that connect related services.
 
-3. **Port Mapping**: Services with ports exposed in docker-compose.yml (e.g., `80:80`) are accessible from the host machine at those ports.
+3. **Port Mapping**: Services with ports exposed in docker-compose.yml (e.g., `8080:80`) are accessible from the host machine at those ports.
 
 4. **Service Discovery**: Using service names instead of IP addresses makes configurations portable and resilient to container restarts (which may change IPs).
 

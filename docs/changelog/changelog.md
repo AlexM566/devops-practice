@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Health checks for critical services
 
 #### Services
-- Nginx web server (port 80)
+- Nginx web server (port 8080)
 - Node.js API with health and metrics endpoints (port 3000)
 - PostgreSQL database (port 5432)
 - Redis cache (port 6379)
