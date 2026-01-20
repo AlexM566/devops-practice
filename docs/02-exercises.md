@@ -19,16 +19,16 @@ This document provides a complete index of all available exercises in the DevOps
 
 | Exercise | Difficulty | Time | Description |
 |----------|-----------|------|-------------|
-| [Docker Basics](exercises/docker/docker-basics.md) | Beginner | 20 min | Learn to run containers, execute commands, and view logs |
-| [Docker Images](exercises/docker/docker-images.md) | Beginner | 25 min | Build custom images, tag them, and understand image layers |
-| [Docker Volumes](exercises/docker/docker-volumes.md) | Beginner | 20 min | Create and manage volumes for data persistence |
+| [Docker Basics](../exercises/docker/docker-basics.md) | Beginner | 20 min | Learn to run containers, execute commands, and view logs |
+| [Docker Images](../exercises/docker/docker-images.md) | Beginner | 25 min | Build custom images, tag them, and understand image layers |
+| [Docker Volumes](../exercises/docker/docker-volumes.md) | Beginner | 20 min | Create and manage volumes for data persistence |
 
 ### Intermediate Level
 
 | Exercise | Difficulty | Time | Description |
 |----------|-----------|------|-------------|
-| [Docker Networking](exercises/docker/docker-networking.md) | Intermediate | 30 min | Create custom networks and connect containers |
-| [Docker Compose Basics](exercises/docker/docker-compose-basics.md) | Intermediate | 35 min | Write docker-compose files for multi-service applications |
+| [Docker Networking](../exercises/docker/docker-networking.md) | Intermediate | 30 min | Create custom networks and connect containers |
+| [Docker Compose Basics](../exercises/docker/docker-compose-basics.md) | Intermediate | 35 min | Write docker-compose files for multi-service applications |
 
 **Total Docker Exercises**: 5 (3 beginner, 2 intermediate)  
 **Total Estimated Time**: 2 hours 10 minutes
@@ -39,16 +39,16 @@ This document provides a complete index of all available exercises in the DevOps
 
 | Exercise | Difficulty | Time | Description |
 |----------|-----------|------|-------------|
-| [Kubernetes Pods](exercises/kubernetes/k8s-pods.md) | Beginner | 25 min | Create pods, view logs, and execute commands in containers |
-| [Kubernetes Deployments](exercises/kubernetes/k8s-deployments.md) | Beginner | 30 min | Create deployments, scale applications, and perform rolling updates |
-| [Kubernetes Services](exercises/kubernetes/k8s-services.md) | Beginner | 25 min | Expose applications with services and test service discovery |
+| [Kubernetes Pods](../exercises/kubernetes/k8s-pods.md) | Beginner | 25 min | Create pods, view logs, and execute commands in containers |
+| [Kubernetes Deployments](../exercises/kubernetes/k8s-deployments.md) | Beginner | 30 min | Create deployments, scale applications, and perform rolling updates |
+| [Kubernetes Services](../exercises/kubernetes/k8s-services.md) | Beginner | 25 min | Expose applications with services and test service discovery |
 
 ### Intermediate Level
 
 | Exercise | Difficulty | Time | Description |
 |----------|-----------|------|-------------|
-| [Kubernetes ConfigMaps & Secrets](exercises/kubernetes/k8s-config.md) | Intermediate | 30 min | Manage application configuration and sensitive data |
-| [Kubernetes Storage](exercises/kubernetes/k8s-storage.md) | Intermediate | 35 min | Work with PersistentVolumes and PersistentVolumeClaims |
+| [Kubernetes ConfigMaps & Secrets](../exercises/kubernetes/k8s-config.md) | Intermediate | 30 min | Manage application configuration and sensitive data |
+| [Kubernetes Storage](../exercises/kubernetes/k8s-storage.md) | Intermediate | 35 min | Work with PersistentVolumes and PersistentVolumeClaims |
 
 **Total Kubernetes Exercises**: 5 (3 beginner, 2 intermediate)  
 **Total Estimated Time**: 2 hours 25 minutes
@@ -59,16 +59,16 @@ This document provides a complete index of all available exercises in the DevOps
 
 | Exercise | Difficulty | Time | Description |
 |----------|-----------|------|-------------|
-| [Linux Files & Permissions](exercises/linux/linux-files.md) | Beginner | 20 min | Master file operations, permissions, and ownership |
-| [Linux Processes](exercises/linux/linux-processes.md) | Beginner | 20 min | View, manage, and control processes |
-| [Linux Users & Groups](exercises/linux/linux-users.md) | Beginner | 25 min | Create users, manage groups, and configure sudo access |
+| [Linux Files & Permissions](../exercises/linux/linux-files.md) | Beginner | 20 min | Master file operations, permissions, and ownership |
+| [Linux Processes](../exercises/linux/linux-processes.md) | Beginner | 20 min | View, manage, and control processes |
+| [Linux Users & Groups](../exercises/linux/linux-users.md) | Beginner | 25 min | Create users, manage groups, and configure sudo access |
 
 ### Intermediate Level
 
 | Exercise | Difficulty | Time | Description |
 |----------|-----------|------|-------------|
-| [Linux Scripting](exercises/linux/linux-scripting.md) | Intermediate | 40 min | Write bash scripts with variables, loops, and conditionals |
-| [Linux Package Management](exercises/linux/linux-packages.md) | Intermediate | 30 min | Install packages, update systems, and manage services |
+| [Linux Scripting](../exercises/linux/linux-scripting.md) | Intermediate | 40 min | Write bash scripts with variables, loops, and conditionals |
+| [Linux Package Management](../exercises/linux/linux-packages.md) | Intermediate | 30 min | Install packages, update systems, and manage services |
 
 **Total Linux Exercises**: 5 (3 beginner, 2 intermediate)  
 **Total Estimated Time**: 2 hours 15 minutes
@@ -79,16 +79,16 @@ This document provides a complete index of all available exercises in the DevOps
 
 | Exercise | Difficulty | Time | Description |
 |----------|-----------|------|-------------|
-| [Network Basics](exercises/networking/network-basics.md) | Beginner | 20 min | Use ping and curl to test connectivity |
-| [DNS Resolution](exercises/networking/network-dns.md) | Beginner | 20 min | Use dig and nslookup to resolve hostnames |
-| [Network Ports](exercises/networking/network-ports.md) | Beginner | 20 min | Check listening ports and test port connectivity |
+| [Network Basics](../exercises/networking/network-basics.md) | Beginner | 20 min | Use ping and curl to test connectivity |
+| [DNS Resolution](../exercises/networking/network-dns.md) | Beginner | 20 min | Use dig and nslookup to resolve hostnames |
+| [Network Ports](../exercises/networking/network-ports.md) | Beginner | 20 min | Check listening ports and test port connectivity |
 
 ### Intermediate Level
 
 | Exercise | Difficulty | Time | Description |
 |----------|-----------|------|-------------|
-| [Network Troubleshooting](exercises/networking/network-troubleshooting.md) | Intermediate | 35 min | Debug connectivity issues and trace network routes |
-| [Docker Networking](exercises/networking/network-docker.md) | Intermediate | 30 min | Understand Docker networks, bridge vs host mode, and isolation |
+| [Network Troubleshooting](../exercises/networking/network-troubleshooting.md) | Intermediate | 35 min | Debug connectivity issues and trace network routes |
+| [Docker Networking](../exercises/networking/network-docker.md) | Intermediate | 30 min | Understand Docker networks, bridge vs host mode, and isolation |
 
 **Total Networking Exercises**: 5 (3 beginner, 2 intermediate)  
 **Total Estimated Time**: 2 hours 5 minutes
@@ -99,9 +99,9 @@ This document provides a complete index of all available exercises in the DevOps
 
 | Exercise | Difficulty | Time | Description |
 |----------|-----------|------|-------------|
-| [Terraform Basics](exercises/terraform/terraform-basics.md) | Beginner | 30 min | Write basic configurations and use terraform init/plan/apply |
-| [Terraform Variables](exercises/terraform/terraform-variables.md) | Intermediate | 30 min | Use variables, outputs, and locals in configurations |
-| [Terraform Modules](exercises/terraform/terraform-modules.md) | Intermediate | 40 min | Create and use modules for reusable infrastructure code |
+| [Terraform Basics](../exercises/terraform/terraform-basics.md) | Beginner | 30 min | Write basic configurations and use terraform init/plan/apply |
+| [Terraform Variables](../exercises/terraform/terraform-variables.md) | Intermediate | 30 min | Use variables, outputs, and locals in configurations |
+| [Terraform Modules](../exercises/terraform/terraform-modules.md) | Intermediate | 40 min | Create and use modules for reusable infrastructure code |
 
 **Total Terraform Exercises**: 3 (1 beginner, 2 intermediate)  
 **Total Estimated Time**: 1 hour 40 minutes
@@ -191,24 +191,24 @@ python -m simulator.cli run workflow.yml --type github
 If you're new to DevOps, follow this path to build foundational skills:
 
 1. **Linux Basics** (1h 5m)
-   - [Linux Files & Permissions](exercises/linux/linux-files.md)
-   - [Linux Processes](exercises/linux/linux-processes.md)
-   - [Linux Users & Groups](exercises/linux/linux-users.md)
+   - [Linux Files & Permissions](../exercises/linux/linux-files.md)
+   - [Linux Processes](../exercises/linux/linux-processes.md)
+   - [Linux Users & Groups](../exercises/linux/linux-users.md)
 
 2. **Networking Fundamentals** (1h)
-   - [Network Basics](exercises/networking/network-basics.md)
-   - [DNS Resolution](exercises/networking/network-dns.md)
-   - [Network Ports](exercises/networking/network-ports.md)
+   - [Network Basics](../exercises/networking/network-basics.md)
+   - [DNS Resolution](../exercises/networking/network-dns.md)
+   - [Network Ports](../exercises/networking/network-ports.md)
 
 3. **Docker Fundamentals** (1h 5m)
-   - [Docker Basics](exercises/docker/docker-basics.md)
-   - [Docker Images](exercises/docker/docker-images.md)
-   - [Docker Volumes](exercises/docker/docker-volumes.md)
+   - [Docker Basics](../exercises/docker/docker-basics.md)
+   - [Docker Images](../exercises/docker/docker-images.md)
+   - [Docker Volumes](../exercises/docker/docker-volumes.md)
 
 4. **Kubernetes Basics** (1h 20m)
-   - [Kubernetes Pods](exercises/kubernetes/k8s-pods.md)
-   - [Kubernetes Deployments](exercises/kubernetes/k8s-deployments.md)
-   - [Kubernetes Services](exercises/kubernetes/k8s-services.md)
+   - [Kubernetes Pods](../exercises/kubernetes/k8s-pods.md)
+   - [Kubernetes Deployments](../exercises/kubernetes/k8s-deployments.md)
+   - [Kubernetes Services](../exercises/kubernetes/k8s-services.md)
 
 **Total Time**: ~4.5 hours
 
@@ -218,22 +218,22 @@ Focus on containerization and orchestration:
 
 1. **Docker Deep Dive** (2h 10m)
    - Complete all Docker exercises in order
-   - [Docker Basics](exercises/docker/docker-basics.md)
-   - [Docker Images](exercises/docker/docker-images.md)
-   - [Docker Volumes](exercises/docker/docker-volumes.md)
-   - [Docker Networking](exercises/docker/docker-networking.md)
-   - [Docker Compose Basics](exercises/docker/docker-compose-basics.md)
+   - [Docker Basics](../exercises/docker/docker-basics.md)
+   - [Docker Images](../exercises/docker/docker-images.md)
+   - [Docker Volumes](../exercises/docker/docker-volumes.md)
+   - [Docker Networking](../exercises/docker/docker-networking.md)
+   - [Docker Compose Basics](../exercises/docker/docker-compose-basics.md)
 
 2. **Kubernetes Mastery** (2h 25m)
    - Complete all Kubernetes exercises in order
-   - [Kubernetes Pods](exercises/kubernetes/k8s-pods.md)
-   - [Kubernetes Deployments](exercises/kubernetes/k8s-deployments.md)
-   - [Kubernetes Services](exercises/kubernetes/k8s-services.md)
-   - [Kubernetes ConfigMaps & Secrets](exercises/kubernetes/k8s-config.md)
-   - [Kubernetes Storage](exercises/kubernetes/k8s-storage.md)
+   - [Kubernetes Pods](../exercises/kubernetes/k8s-pods.md)
+   - [Kubernetes Deployments](../exercises/kubernetes/k8s-deployments.md)
+   - [Kubernetes Services](../exercises/kubernetes/k8s-services.md)
+   - [Kubernetes ConfigMaps & Secrets](../exercises/kubernetes/k8s-config.md)
+   - [Kubernetes Storage](../exercises/kubernetes/k8s-storage.md)
 
 3. **Container Networking** (30m)
-   - [Docker Networking](exercises/networking/network-docker.md)
+   - [Docker Networking](../exercises/networking/network-docker.md)
 
 **Total Time**: ~5 hours
 
@@ -243,20 +243,20 @@ Focus on automation and infrastructure management:
 
 1. **Linux Administration** (2h 15m)
    - Complete all Linux exercises
-   - [Linux Files & Permissions](exercises/linux/linux-files.md)
-   - [Linux Processes](exercises/linux/linux-processes.md)
-   - [Linux Users & Groups](exercises/linux/linux-users.md)
-   - [Linux Scripting](exercises/linux/linux-scripting.md)
-   - [Linux Package Management](exercises/linux/linux-packages.md)
+   - [Linux Files & Permissions](../exercises/linux/linux-files.md)
+   - [Linux Processes](../exercises/linux/linux-processes.md)
+   - [Linux Users & Groups](../exercises/linux/linux-users.md)
+   - [Linux Scripting](../exercises/linux/linux-scripting.md)
+   - [Linux Package Management](../exercises/linux/linux-packages.md)
 
 2. **Terraform** (1h 40m)
    - Complete all Terraform exercises
-   - [Terraform Basics](exercises/terraform/terraform-basics.md)
-   - [Terraform Variables](exercises/terraform/terraform-variables.md)
-   - [Terraform Modules](exercises/terraform/terraform-modules.md)
+   - [Terraform Basics](../exercises/terraform/terraform-basics.md)
+   - [Terraform Variables](../exercises/terraform/terraform-variables.md)
+   - [Terraform Modules](../exercises/terraform/terraform-modules.md)
 
 3. **Docker Compose** (35m)
-   - [Docker Compose Basics](exercises/docker/docker-compose-basics.md)
+   - [Docker Compose Basics](../exercises/docker/docker-compose-basics.md)
 
 **Total Time**: ~4.5 hours
 
