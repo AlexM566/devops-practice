@@ -10,6 +10,7 @@ name: devops-playground
 nodes:
   # Control plane node
   - role: control-plane
+    image: kindest/node:v1.31.0
     kubeadmConfigPatches:
       - |
         kind: InitConfiguration
@@ -31,21 +32,23 @@ nodes:
         protocol: TCP
     extraMounts:
       # Mount local directory for development
-      - hostPath: ./kubernetes/data
+      - hostPath: ./data
         containerPath: /data
         readOnly: false
 
   # Worker node 1
   - role: worker
+    image: kindest/node:v1.31.0
     extraMounts:
-      - hostPath: ./kubernetes/data
+      - hostPath: ./data
         containerPath: /data
         readOnly: false
 
   # Worker node 2
   - role: worker
+    image: kindest/node:v1.31.0
     extraMounts:
-      - hostPath: ./kubernetes/data
+      - hostPath: ./data
         containerPath: /data
         readOnly: false
 
